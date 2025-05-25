@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Temp Mail Viewer</title>
+</head>
+<body>
+  <h1>Cek Inbox Email Catch-All</h1>
+  <p>Masukkan prefix email (contoh: akun123@creator49.biz.id):</p>
+  <input type="text" id="prefix" placeholder="akun123">
+  <button onclick="bukaInbox()">Buka Inbox</button>
+
+  <script>
+    function bukaInbox() {
+      const prefix = document.getElementById("prefix").value.trim();
+      if (!prefix) {
+        alert("Masukkan prefix email terlebih dahulu!");
+        return;
+      }
+      const email = `${prefix}@creator49.biz.id`;
+      window.location.href = `https://mail.google.com/mail/u/0/#search/${email}`;
+    }
+  </script>
+</body>
+</html>
